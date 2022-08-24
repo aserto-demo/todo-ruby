@@ -92,7 +92,7 @@ GEM
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
       railties (>= 3.2)
-    erubi (1.10.0)
+    erubi (1.11.0)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -255,4 +255,4 @@ RUBY VERSION
    ruby 2.7.6p219
 
 BUNDLED WITH
-   2.1.2
+   2.1.4
