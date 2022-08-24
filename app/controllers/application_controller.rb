@@ -9,10 +9,6 @@ class ApplicationController < ActionController::API
     render json: { error: exception.message }, status: :internal_server_error
   end
 
-  rescue_from Aserto::AccessDenied do |exception|
-    render json: { error: exception.message }, status: :forbidden
-  end
-
   private
 
   def validate_jwt

@@ -3,9 +3,6 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: %i[show update destroy]
 
-  # authorize
-  aserto_authorize_resource
-
   # GET /todos
   def index
     @todos = Todo.all
