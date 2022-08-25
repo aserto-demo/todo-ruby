@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::API
-  before_action :validate_jwt
-
   rescue_from StandardError do |exception|
     Rails.logger.error exception.backtrace.inspect if Rails.env.development?
 
@@ -10,8 +8,4 @@ class ApplicationController < ActionController::API
   end
 
   private
-
-  def validate_jwt
-    Auth::VerifyJwt.call(request.headers["Authorization"].split.last)
-  end
 end
